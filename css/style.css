@@ -1,0 +1,96 @@
+/* Start Global Rules */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 14px ; 
+    font-family: 'Open Sans', sans-serif;
+} 
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container {
+    padding: 0 50px;
+    margin: 0 auto;
+}
+@media (max-width : 767px){
+    .container {
+        padding: 0 25px;
+    }
+}
+
+
+  /* End Global Rules */
+
+/* Start Variables */
+:root{
+ --intro-color : hsl(217,28%,15%)  ; 
+ --white :  hsl(0 , 0% , 100%)     ; 
+ --Secondary-font : 'Raleway', sans-serif;
+}
+/* End Variables */
+
+/* Start Header */
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--intro-color);
+}
+ header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+} 
+header .logo {
+    width: 120px; 
+    cursor: pointer;
+}
+@media (max-width : 767px){
+    header .logo {
+        width: 80px;
+    }
+}
+header .logo img {
+    max-width: 100%;
+}
+header .links {
+    display: flex;
+    flex-grow: 1; 
+    justify-content: flex-end;
+}
+header  .links li a {
+    display: inline-block; 
+    color: var(--white);
+    font-family: var(--Secondary-font) ;
+    text-transform: capitalize;
+    transition:  font-weight , text-decoration .25s;
+}
+header  .links li:not(:last-child) a {
+margin-right: 50px;
+}
+@media (max-width : 767px){
+    header  .links li:not(:last-child) a {
+        margin-right: 25px;
+    }
+}
+
+header  .links  a:hover {
+font-weight: 700;
+text-decoration: underline;
+}
+/* End Header */
