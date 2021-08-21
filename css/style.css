@@ -20,9 +20,25 @@ ul {
 a{
     text-decoration: none;
 }
+button {
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    text-transform: capitalize;
+    color: var(--white);
+    font-weight: 700;
+    background-image: linear-gradient( to right , var(--cyan) 20% , var(--l-blue)); 
+    transition: background-image .3s;   
+}
+button:hover{
+    background-image : linear-gradient( to right , var(--cyan), var(--cyan)); 
+}
 .container {
     padding: 0 50px;
-    margin: 0 auto;
+    margin: 0 auto; 
+    width: 98%;
 }
 @media (max-width : 767px){
     .container {
@@ -38,15 +54,14 @@ a{
  --intro-color : hsl(217,28%,15%)  ; 
  --white :  hsl(0 , 0% , 100%)     ; 
  --Secondary-font : 'Raleway', sans-serif;
+ --cyan : hsl(176,68%,64%) ; 
+ --l-blue : hsl(198,60%,50%) ; 
 }
 /* End Variables */
 
 /* Start Header */
 header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    height: 120px;
     background-color: var(--intro-color);
 }
  header .container {
@@ -94,3 +109,74 @@ font-weight: 700;
 text-decoration: underline;
 }
 /* End Header */
+
+/* Start Intro */
+.intro-image{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: var(--intro-color); 
+    padding-bottom: 30px;
+}
+.intro-image img {
+    max-width: 525px;
+}
+@media (max-width : 767px){
+    .intro-image {
+        margin-top: -1px;
+    }
+    .intro-image img {
+        max-width: 250px;
+    }
+}
+.intro-text{
+    background : var(--intro-color) url("../images/bg-curvy-desktop.svg") no-repeat top ; 
+    background-size: cover;
+}
+.intro-text .container {
+    min-height: 450px;
+    text-align: center;
+}
+@media (max-width : 767px){
+    .intro-text{
+        background-image: none;  
+        margin-top: -2px;
+    }
+    .intro-text .container{
+        padding-bottom: 100px;
+        min-height: auto;
+    }
+}
+
+.intro-text h1 {
+    margin: 0 auto 25px;
+    text-align: center;
+    font-family: var(--Secondary-font);
+    font-weight: 700;
+    color: var(--white);
+    font-size: 30px;
+    line-height: 1.4;
+}
+.intro-text p {
+    margin: 0 auto 20px;
+    font-family: var(--Secondary-font);
+    color: var(--white);
+    text-align: center;
+    line-height: 1.6;
+    max-width: 490px;
+    padding: 0 30px;
+    text-indent: -10px;
+}
+@media (max-width : 767px){
+    .intro-text h1 {
+        margin-bottom: 40px;
+    }
+    .intro-text br{
+        display: none;
+    }
+    .intro-text p {
+        margin-bottom: 30px;
+        line-height: 1.8;
+    }
+}
+/* End Intro */
