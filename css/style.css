@@ -195,7 +195,7 @@ text-decoration: underline;
 .features .container{
     display: grid;
     grid-template-columns: repeat(2, minmax(350px , 1fr));
-    grid-gap : 60px ; 
+    grid-gap : 50px ; 
     justify-content: center;
     align-items: center;
     padding-top: 20px;
@@ -280,7 +280,7 @@ width: 100%;
 }
 .prod .text .more:hover {
     color: var(--white);  
-    border-bottom-color : var(--white) ;
+    border-bottom-color : var(--white)
 }
 
 .prod .text .more a {
@@ -312,7 +312,88 @@ width: 100%;
   .prod .text h2  br{
     display: none;
   }
-
 }
 
 /* End Productive */
+
+/* Start testimonials */
+
+.testimonials{
+    padding-top: 100px;
+    padding-bottom: 300px; 
+    background-color: var(--main-color);
+    position: relative;
+    z-index: -2;
+}
+@media(max-width : 767px){
+    .testimonials{
+        margin-top: -2px;
+    } 
+}
+.testimonials .container {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3 , minmax(300px , 1fr));
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+@media (max-width : 992px){
+    .testimonials .container {
+      grid-template-columns: minmax(300px , 1fr);
+    } 
+}
+
+.testimonials .container .box {
+    background-color: hsl(219,30%,18%);
+    padding : 40px 30px 30px ; 
+    color: var(--white);
+    border-radius: 6px;
+    box-shadow: 4px -4px 0px 0px var(--intro-color) , 
+    4px -4px 0px 0px var(--intro-color) ; 
+}
+.testimonials .container .box:first-child {
+   position: relative; 
+}
+
+
+.testimonials .container .box .quotes{
+    position: absolute;
+    top: -40px;
+    left: -10px;
+    width: 60px;
+    z-index: -1;
+}
+@media (max-width : 992px){
+    .testimonials .container .box .quotes{
+    top: -30px;
+    left: 5px;
+    width: 40px;
+}
+}
+.testimonials .container .box p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.testimonials .container .box .person  {
+    display: flex;
+   align-items: center;
+
+}
+.testimonials .container .box .person img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.testimonials .container .box .person .who h5{
+    margin-bottom: 7px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+/* Start testimonials */
