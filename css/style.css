@@ -36,9 +36,14 @@ button:hover{
     background-image : linear-gradient( to right , var(--cyan), var(--cyan)); 
 }
 .container {
-    padding: 0 50px;
+    padding: 0 90px;
     margin: 0 auto; 
     width: 98%;
+}
+@media (max-width : 992px){
+    .container{
+    padding : 0 45px ;
+}
 }
 @media (max-width : 767px){
     .container {
@@ -227,3 +232,87 @@ text-decoration: underline;
 }
 
 /* End Features */
+
+/* Start Productive */
+.prod {
+    background-color: var(--main-color);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.prod .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prod .image {
+    max-width: 500px;
+    margin-right: 100px;
+}
+ .prod .image img{
+width: 100%;
+} 
+.prod .text {
+    padding : 0 25px ;
+}
+.prod .text h2 {
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 35px;
+    font-family: var(--Secondary-font);
+}
+.prod .text p {
+    margin-bottom: 20px;
+    color: var(--white);
+    max-width: 620px;
+    line-height: 1.4;
+}
+
+.prod .text .more {
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--cyan);
+    width: fit-content;
+    color: var(--cyan);
+    cursor: pointer;
+    transition: color , border-bottom-color .3s;
+}
+.prod .text .more:hover {
+    color: var(--white);  
+    border-bottom-color : var(--white) ;
+}
+
+.prod .text .more a {
+    color:inherit; 
+    margin-right: 5px;
+}
+@media (max-width : 992px){
+   .prod .text h2{
+    font-size: 25px;
+   } 
+}
+@media (max-width : 767px){
+
+    .prod{
+        margin-top: -2px;
+    }
+    .prod .container {
+      flex-direction: column;
+  } 
+  .prod .image{
+      margin : 0 0 40px;
+  }
+  .prod .text{
+      padding: 0;
+  }
+  .prod .text h2{
+      font-size: 18px;
+  }
+  .prod .text h2  br{
+    display: none;
+  }
+
+}
+
+/* End Productive */
