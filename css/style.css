@@ -20,7 +20,7 @@ ul {
 a{
     text-decoration: none;
 }
-button {
+button , input[type="submit"] {
     cursor: pointer;
     width: 200px;
     height: 40px;
@@ -32,7 +32,7 @@ button {
     background-image: linear-gradient( to right , var(--cyan) 20% , var(--l-blue)); 
     transition: background-image .3s;   
 }
-button:hover{
+button:hover , input[type="submit"]:hover{
     background-image : linear-gradient( to right , var(--cyan), var(--cyan)); 
 }
 .container {
@@ -323,7 +323,7 @@ width: 100%;
     padding-bottom: 300px; 
     background-color: var(--main-color);
     position: relative;
-    z-index: -2;
+    z-index: 2;
 }
 @media(max-width : 767px){
     .testimonials{
@@ -395,5 +395,84 @@ width: 100%;
     font-size: 16px;
 }
 
+/* End testimonials */
 
-/* Start testimonials */
+/* Start Access */
+.access{
+    background-color: var(--intro-color);
+    color: var(--white);
+    position: absolute;
+    bottom: calc(-270px / 2);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 270px;
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 10px;
+    font-family: var( --Secondary-font);
+}
+@media (max-width : 767px){
+    .access {
+        width: 94%;
+        padding: 30px 20px;
+        height: 330px;
+        bottom: calc(-330px /2);
+    }
+}
+.access p {
+    max-width: 630px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+@media (max-width :767px){
+    .access h1 {
+        font-size: 20px;
+        margin: 0 auto 20px;
+    }
+}
+.access form {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    align-items: center;
+}
+@media (max-width : 767px){
+    .access form {
+        flex-direction: column; 
+        padding: 0 ;
+    }
+}
+input:focus{
+    outline: none;
+}
+.access form input[type="email"] {
+    width: calc(100% - 230px);
+    border: none;
+    border-radius: 30px ;
+    padding-left: 25px;
+    caret-color: var(--l-blue);
+    height: 40px;
+}
+@media (max-width :767px){
+    .access form input[type="email"]{
+        width: 95%;
+        margin-bottom: 15px;
+    }
+    .access form input[type="submit"]{
+        width: 95%;
+    }
+}
+/* End Access */
+
+/* Start Footer */
+footer{
+    min-height: 500px;
+    background-color: hsl(216,53%,9%);
+}
+@media (max-width :767px){
+    footer {
+        margin-top : -2px
+    }
+}
+/* End Footer */
